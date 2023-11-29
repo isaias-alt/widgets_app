@@ -20,7 +20,7 @@ class AppTheme {
 
   ThemeData getTheme() {
     return ThemeData(
-      colorSchemeSeed: colorList[selectedColor],
-    );
+        colorSchemeSeed: colorList[selectedColor],
+        appBarTheme: const AppBarTheme(centerTitle: true));
   }
 }
