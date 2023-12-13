@@ -20,6 +20,16 @@ final appRouter = GoRouter(
       builder: (context, state) => const CardsScreen(),
     ),
     GoRoute(
+      path: '/progress',
+      name: ProgressScreen.name,
+      builder: (context, state) => const ProgressScreen(),
+    ),
+    GoRoute(
+      path: '/snackbars',
+      name: SnackbarScreen.name,
+      builder: (context, state) => const SnackbarScreen(),
+    ),
+    GoRoute(
       path: '/animated_screen',
       name: AnimatedScreen.name,
       builder: (context, state) => const AnimatedScreen(),
@@ -33,16 +43,6 @@ final appRouter = GoRouter(
       path: '/infinite_scroll_screen',
       name: InfiniteScrollScreen.name,
       builder: (context, state) => const InfiniteScrollScreen(),
-    ),
-    GoRoute(
-      path: '/progress',
-      name: ProgressScreen.name,
-      builder: (context, state) => const ProgressScreen(),
-    ),
-    GoRoute(
-      path: '/snackbar_screen',
-      name: SnackbarScreen.name,
-      builder: (context, state) => const SnackbarScreen(),
     ),
     GoRoute(
       path: '/ui_controls_screen',
