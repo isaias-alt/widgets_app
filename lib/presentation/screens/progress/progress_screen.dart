@@ -39,7 +39,7 @@ class _ProgressView extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text('Circular y Linear Indicator Controlado'),
+          Text('Circular y Linear Indicator Controlated'),
           SizedBox(
             height: 10,
           ),
