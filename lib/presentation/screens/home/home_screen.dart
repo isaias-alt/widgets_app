@@ -46,6 +46,7 @@ class _CustomListTile extends StatelessWidget {
         ),
         trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary),
         title: Text(menuItem.title),
+        subtitle: Text(menuItem.subTitle),
         titleAlignment: ListTileTitleAlignment.center,
         onTap: () => context.push(menuItem.link));
   }

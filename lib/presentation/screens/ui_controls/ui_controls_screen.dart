@@ -7,6 +7,76 @@ class UiControlsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('UI Controls Screen'),
+      ),
+      body: const _UiControlsView(),
+    );
+  }
+}
+
+class _UiControlsView extends StatefulWidget {
+  const _UiControlsView();
+
+  @override
+  State<_UiControlsView> createState() => _UiControlsViewState();
+}
+
+enum Transportation { car, plane, boat, submarine }
+
+class _UiControlsViewState extends State<_UiControlsView> {
+  bool isDeveloper = true;
+  Transportation selectedTransportation = Transportation.car;
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      physics: const ClampingScrollPhysics(),
+      children: [
+        SwitchListTile(
+            title: const Text('Developer Mode'),
+            subtitle: const Text('Aditional controls'),
+            value: isDeveloper,
+            onChanged: (value) => setState(() {
+                  isDeveloper = !isDeveloper;
+                })),
+        RadioListTile(
+          title: const Text('Car'),
+          subtitle: const Text('Send by car'),
+          value: Transportation.car,
+          groupValue: selectedTransportation,
+          onChanged: (value) => setState(() {
+            selectedTransportation = Transportation.car;
+          }),
+        ),
+        RadioListTile(
+          title: const Text('Plane'),
+          subtitle: const Text('Send by plane'),
+          value: Transportation.plane,
+          groupValue: selectedTransportation,
+          onChanged: (value) => setState(() {
+            selectedTransportation = Transportation.plane;
+          }),
+        ),
+        RadioListTile(
+          title: const Text('Boat'),
+          subtitle: const Text('Send by boat'),
+          value: Transportation.boat,
+          groupValue: selectedTransportation,
+          onChanged: (value) => setState(() {
+            selectedTransportation = Transportation.boat;
+          }),
+        ),
+        RadioListTile(
+          title: const Text('Submarine'),
+          subtitle: const Text('Send by submarine'),
+          value: Transportation.submarine,
+          groupValue: selectedTransportation,
+          onChanged: (value) => setState(() {
+            selectedTransportation = Transportation.submarine;
+          }),
+        )
+      ],
+    );
   }
 }
