@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class UiControlsScreen extends StatelessWidget {
   static const String name = 'ui_controls_screen';
@@ -12,6 +13,10 @@ class UiControlsScreen extends StatelessWidget {
         title: const Text('UI Controls Screen'),
       ),
       body: const _UiControlsView(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.pop(),
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+      ),
     );
   }
 }

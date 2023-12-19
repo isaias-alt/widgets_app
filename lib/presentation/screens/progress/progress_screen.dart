@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProgressScreen extends StatelessWidget {
   static const String name = 'progress_screen';
@@ -12,6 +13,10 @@ class ProgressScreen extends StatelessWidget {
         title: const Text('Progress Indicators'),
       ),
       body: const _ProgressView(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.pop(),
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+      ),
     );
   }
 }
