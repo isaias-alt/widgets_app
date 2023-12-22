@@ -15,6 +15,11 @@ class MenuItems {
 
 const appMenuItems = <MenuItems>[
   MenuItems(
+      title: 'Riverpod Counter',
+      subTitle: 'A little counter screen with Riverpod',
+      link: '/counter',
+      icon: Icons.add),
+  MenuItems(
       title: 'Buttons',
       subTitle: 'Several buttons',
       link: '/buttons',
@@ -40,7 +45,7 @@ const appMenuItems = <MenuItems>[
       link: '/animated',
       icon: Icons.check_box_outline_blank_outlined),
   MenuItems(
-      title: 'UI controls and Tiles',
+      title: 'UI Controls and Tiles',
       subTitle: 'A series of Flutter controls',
       link: '/ui-controls',
       icon: Icons.car_rental_outlined),
